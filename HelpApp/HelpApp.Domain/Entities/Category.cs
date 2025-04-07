@@ -1,5 +1,5 @@
 ﻿using HelpApp.Domain.Validation;
-using StockApp.Domain.Entities;
+using HelpApp.Domain.Entities;
 
 namespace HelpApp.Domain.Entities
 {

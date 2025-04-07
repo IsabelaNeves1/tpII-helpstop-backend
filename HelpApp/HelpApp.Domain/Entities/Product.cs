@@ -17,7 +17,7 @@ namespace HelpApp.Domain.Entities
 
         public Product(string name, string description, decimal price, int stock, string image)
         {
-            ValidateDomain(name, description, price, stock, image);
+            ValidateDomain(name , description, price, stock, image);
         }
 
         public Product(int id, string name, string description, decimal price, int stock, string image)
@@ -26,10 +26,6 @@ namespace HelpApp.Domain.Entities
             Id = id;
             ValidateDomain(name, description, price, stock, image);
         }
-
-
-
-        public Category Category { get; set; }
 
         private void ValidateDomain(string name, string description, decimal price, int stock, string image)
         {
@@ -40,7 +36,7 @@ namespace HelpApp.Domain.Entities
                 "Invalid name, too short, minimum 3 characters.");
 
             DomainExceptionValidation.When(string.IsNullOrEmpty(description),
-                "Invalid description, name is required.");
+                "Invalid description, description is required.");
 
             DomainExceptionValidation.When(description.Length < 5,
                 "Invalid description, too short, minimum 5 characters.");
