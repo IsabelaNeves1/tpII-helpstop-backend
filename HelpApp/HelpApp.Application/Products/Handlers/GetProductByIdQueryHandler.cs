@@ -14,6 +14,11 @@ public class GetProductByIdQueryHandler : IRequestHandler<GetProductByIdQuery, P
         _productRepository = productRepository;
     }
 
+    public Task<Product> Handle(GetProductByIdQuery request, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<Product> Handler(GetProductByIdQuery request,
         CancellationToken cancellationToken)
     {
