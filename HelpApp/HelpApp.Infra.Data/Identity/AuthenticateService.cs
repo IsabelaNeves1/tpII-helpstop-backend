@@ -2,7 +2,8 @@
 
 namespace HelpApp.Infra.Data.Identity
 {
-    internal class AuthenticateService
+    public class AuthenticateService 
     {
+
     }
 }
